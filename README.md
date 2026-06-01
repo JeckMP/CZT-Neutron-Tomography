@@ -118,8 +118,11 @@ Laguda, E.
 
 Ph.D. Thesis, McMaster University, 2026.
 
----
+### Research Supervision
 
-## License
+This work was conducted under the supervision of:
 
-This project is distributed under the MIT License.
+- Dr. Soo Hyun Byun, McMaster University
+- Dr. Troy Farncombe, McMaster University
+
+The author gratefully acknowledges the guidance, mentorship, and support provided by Dr. Byun and Dr. Farncombe throughout the development of this research and the associated simulation framework.
