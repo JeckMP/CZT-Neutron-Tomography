@@ -3,43 +3,122 @@
 **Author:** Edcer Laguda  
 **Affiliation:** McMaster University, Department of Physics and Astronomy  
 **Program:** Ph.D. in Medical Physics  
+**Supervisor:** Dr. Soo Hyun Byun
+
+---
 
 ## Overview
 
-This repository contains software and analysis tools developed for neutron imaging and neutron tomography using a CZT-based neutron imaging detector.
+This repository contains software and analysis tools developed for neutron imaging and neutron tomography using a cadmium zinc telluride (CZT) detector system.
 
-The software was developed as part of a Ph.D. research project at McMaster University investigating neutron radiography, neutron tomography, detector characterization, and image reconstruction.
+The software was developed as part of a Ph.D. research project at McMaster University investigating neutron radiography, neutron tomography, detector characterization, image reconstruction, and event-based neutron imaging.
 
-## Features
+---
 
-- Neutron attenuation map generation
-- Tomographic reconstruction
-- ASTRA Toolbox integration
+## Repository Structure
+
+```text
+ASTRA/
+    astra_recon.py
+    view_iteration_study_advanced.py
+    README.md
+
+README.md
+LICENSE
+.gitignore
+```
+
+---
+
+## Software Components
+
+### ASTRA Reconstruction
+
+The ASTRA reconstruction script performs tomographic reconstruction from neutron attenuation projections using:
+
 - CGLS reconstruction
 - SIRT reconstruction
-- Interactive volume visualization
-- Image denoising and post-processing
 
-## Example Datasets
+Supported configurations:
 
-- Boric Acid Phantom
-- Hand Sanitizer Phantom
-- Air Turbine Assembly
+```text
+CGLS10
+CGLS20
+CGLS50
+CGLS100
+SIRT100
+SIRT200
+SIRT300
+```
 
-## Supervisor
+### Interactive Volume Viewer
 
-Dr. Soo Hyun Byun  
-McMaster University
+The visualization tool provides:
+
+- Axial slice visualization
+- Coronal slice visualization
+- Sagittal slice visualization
+- Contrast adjustment
+- Reconstruction comparison
+- Denoising comparison
+
+Supported denoising methods:
+
+```text
+None
+Gaussian
+Median
+NLM
+TV
+```
+
+---
+
+## Requirements
+
+Python 3.x
+
+Required packages:
+
+```bash
+pip install numpy scipy matplotlib
+```
+
+ASTRA Toolbox:
+
+```bash
+pip install astra-toolbox
+```
+
+---
+
+## Running the Software
+
+Reconstruction:
+
+```bash
+python ASTRA/astra_recon.py
+```
+
+Visualization:
+
+```bash
+python ASTRA/view_iteration_study_advanced.py
+```
+
+---
 
 ## Citation
 
 If this software is used in academic work, please cite:
 
-Edcer Laguda.
+Laguda, E.
 
 *Development of a CZT-Based Neutron Imaging Detector for Neutron Radiography and Tomography.*
 
 Ph.D. Thesis, McMaster University, 2026.
+
+---
 
 ## License
 
